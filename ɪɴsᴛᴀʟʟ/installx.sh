@@ -51,7 +51,7 @@ echo -e "\033[1;31m       ══════════════════
 	echo ""
 read -p "        [🔑โปรดใส่รหัสสำหรับติดตั้ง🔑]v20:" passwds
 echo -e "\033[1;31m       ══════════════════════════════════════════════════\033[0m"
-wget -q -O /usr/bin/pass https://raw.githubusercontent.com/LiLGun-X/SCRIPTX-VIP/main/Install/pass.txt
+wget -q -O /usr/bin/pass https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/pass.txt
 if ! grep -w -q $passwds /usr/bin/pass; then
 clear
 echo ""
