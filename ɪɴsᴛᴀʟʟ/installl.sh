@@ -49,8 +49,9 @@ apt-get update -q > /dev/null 2>&1
 
 #speedtestU.20
 die "❯❯❯ install speedtest U.20"
-apt-get install python3-pip 
-pip3 install speedtest-cli 
+sudo apt update -q > /dev/null 2>&1
+apt-get install python3-pip -yy -q > /dev/null 2>&1
+pip3 install speedtest-cli -q > /dev/null 2>&1
 
 
 die "❯❯❯ apt-get install squid3"
