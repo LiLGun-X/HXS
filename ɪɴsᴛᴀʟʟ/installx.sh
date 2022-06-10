@@ -89,7 +89,7 @@ echo -e "\033[1;33m        |  แน่ใจคุณต้องการร�
 echo -e "\033[1;31m       ══════════════════════════════════════════════\033[0m"
     read -p "             ━━ [ Y/N ] : " -e -i y Confirn
     if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
-wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/SCRIPTX-VIP/main/Install/installl.sh"
+wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/installl.sh"
 bash install
 exit
 elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
