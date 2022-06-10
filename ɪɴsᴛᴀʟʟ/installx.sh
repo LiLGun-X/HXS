@@ -7,6 +7,9 @@ gem install lolcat
 apt -y install figlet
 apt -y install dos2unix
 
+#install python pip
+sudo apt update
+apt-get install python3-pip -yy
 
 rm -f installx.sh
 scrip="https://raw.githubusercontent.com/tokssa/SAVAT/master"
