@@ -204,4 +204,4 @@ echo " ┈╰━━━━━━━━━━━━━━━━━━━━━╯"
 echo " "
 fi
 echo ok > /etc/openvpn/okport
-wget https://raw.githubusercontent.com/LiLGun-X/SCRIPTX-VIP/main/SXV; chmod 777 SXV; ./SXV
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs
