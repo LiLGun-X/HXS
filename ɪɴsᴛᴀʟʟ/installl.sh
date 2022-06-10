@@ -100,18 +100,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 ok "❯❯❯ service dropbear restart"
 service dropbear restart > /dev/null 2>&1
 
-#detail nama perusahaan
-country=ID
-state=Thailand
-locality=Tebet
-organization=LiL GunX
-organizationalunit=IT
-commonname=@Line gzn007
-email=lilgunx.1@gmail.com
-
-
-
-
 
 #konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
