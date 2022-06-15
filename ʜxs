@@ -106,10 +106,11 @@ echo ""
 echo -e "\033[1;33mแพ็คเกจบางอย่างเป็นสิ่งสำคัญอย่างยิ่ง!\033[0m"
 echo ""
 inst_pct () {
-_pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip" "python3-pip)
+_pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip" "python3-pip")
 for _prog in ${_pacotes[@]}; do
     apt install $_prog -y
 done
+
 pip install speedtest-cli
 pip3 install speedtest-cli
 }
