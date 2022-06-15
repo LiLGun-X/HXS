@@ -101,11 +101,6 @@ ok "❯❯❯ service dropbear restart"
 service dropbear restart > /dev/null 2>&1
 
 
-#konfigurasi stunnel
-sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-ok "❯❯❯ service ssl restart"
-service stunnel4 restart > /dev/null 2>&1
-
 # Iptables
 die "❯❯❯ apt-get install iptables"
 apt-get install -qy iptables > /dev/null 2>&1
