@@ -1,13 +1,12 @@
 #!/bin/bash
 
 # install python
- echo "❯❯❯ INSTALL LOLCAT"
-apt update -q > /dev/null 2>&1
-apt install ruby-full -yy -q > /dev/null 2>&1
-gem install lolcat -q > /dev/null 2>&1
-apt -y install figlet -q > /dev/null 2>&1
-apt -y install dos2unix -q > /dev/null 2>&1
-
+ 
+apt update 
+apt install ruby-full -yy 
+gem install lolcat
+apt -y install figlet 
+apt -y install dos2unix 
 rm -f installx.sh
 scrip="https://raw.githubusercontent.com/tokssa/SAVAT/master"
 clear
