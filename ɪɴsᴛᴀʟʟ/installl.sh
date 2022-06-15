@@ -72,7 +72,7 @@ usermod -aG sudo news
 ok "❯❯❯ apt-get install vnstat"
 apt-get install -qy vnstat > /dev/null 2>&1
 chown -R vnstat:vnstat /var/lib/vnstat
-wget -q http://www.sqweek.com/sqweek/files/vnstat_php_frontend-1.5.1.tar.gz
+wget -q https://github.com/LiLGun-X/HYPER-X-SCRIPT/raw/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 bandwidth
