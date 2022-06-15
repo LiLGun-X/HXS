@@ -49,7 +49,7 @@ apt-get update -q > /dev/null 2>&1
 
 #speedtestU.20
 die "❯❯❯ install speedtest U.20"
-pip3 install speedtest-cli -q > /dev/null 2>&1
+ -q > /dev/null 2>&1
 
 
 die "❯❯❯ apt-get install squid3"
