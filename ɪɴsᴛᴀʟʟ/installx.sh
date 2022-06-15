@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install python
-die "❯❯❯ INSTALL LOLCAT"
+ echo "❯❯❯ INSTALL LOLCAT"
 apt update -q > /dev/null 2>&1
 apt install ruby-full -yy -q > /dev/null 2>&1
 gem install lolcat -q > /dev/null 2>&1
