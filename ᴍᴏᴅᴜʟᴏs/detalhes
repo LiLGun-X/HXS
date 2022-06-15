@@ -1,5 +1,11 @@
 #!/bin/bash
 clear
+
+echo ""
+echo " ░▒█░▒█░▒█░░▒█░▒█▀▀█░▒█▀▀▀░▒█▀▀▄░░░░▀▄░▄▀"|lolcat
+echo " ░▒█▀▀█░▒▀▄▄▄▀░▒█▄▄█░▒█▀▀▀░▒█▄▄▀░▀▀░░▒█░░"|lolcat
+echo " ░▒█░▒█░░░▒█░░░▒█░░░░▒█▄▄▄░▒█░▒█░░░░▄▀▒▀▄"|lolcat
+echo "                                𝙎𝘾𝙍𝙄𝙋𝙏"
 echo -e "\E[44;1;37m               INFORMACOES DO VPS                 \E[0m"
 echo ""
 if [ -f /etc/lsb-release ]
