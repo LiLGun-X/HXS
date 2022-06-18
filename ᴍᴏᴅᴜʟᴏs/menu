@@ -461,6 +461,14 @@ case "$x" in
    17)
    limit_ssh
    ;;
+   b1)
+   BW
+   echo -ne "\n\033[1;31mENTER \033[1;33mTO RETURN TO \033[1;32mMENU!\033[0m"; read
+   ;;
+   b2)
+   BWU
+   echo -ne "\n\033[1;31mENTER \033[1;33mTO RETURN TO \033[1;32mMENU!\033[0m"; read
+   ;;
    18)
    clear
    badvpn
