@@ -883,9 +883,9 @@ SCOLOR='\033[0m'
 
 				opnp=$(cat /etc/openvpn/server.conf | grep "port" | awk {'print $2'})
 				[[ -d /var/www/html/openvpn ]] && {
-					ovpnweb=$(echo -e "\033[1;32m◉ ")
+					ovpnweb=$(echo -e "\033[1;32m★ ")
 				} || {
-					ovpnweb=$(echo -e "\033[1;31m○ ")
+					ovpnweb=$(echo -e "\033[1;31m☆ ")
 				}
 				if grep "duplicate-cn" /etc/openvpn/server.conf >/dev/null; then
 					mult=$(echo -e "\033[1;32m◉ ")
@@ -1027,7 +1027,7 @@ SCOLOR='\033[0m'
 						clear
 						fun_apchon() {
 							apt-get install apache2 zip -y
-							sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf
+							sed -i "s/Listen 80/Listen 86/g" /etc/apache2/ports.conf
 							service apache2 restart
 							[[ ! -d /var/www/html ]] && {
 								mkdir /var/www/html
