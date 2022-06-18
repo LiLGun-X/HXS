@@ -377,7 +377,7 @@ Test  $IP:86/openvpn/$username.zip U$username P$password L$sshlimiter"'' https:/
 				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:81/html/openvpn/$username.zip"
 			} || {
 
-				echo -e "\033[1;32mLINK➪\033[1;37m: \033[1;36m$IP:86/openvpn/$username.zip"
+				echo -e "\033[1;32mLINK➪\033[1;37m: \033[1;36m$IP:88/openvpn/$username.zip"
 			}
 
 		} || {
