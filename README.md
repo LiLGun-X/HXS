@@ -1,6 +1,6 @@
 # SSHPLUS
 
-apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/kiritosshxd/SSHPLUS/master/Plus && chmod 777 Plus && ./Plus
+apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%CA%9Cxs && chmod 777 Plus && ./Plus
 
 
 #Acessa Root
