@@ -138,13 +138,9 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 service ssh restart
 
 ok "❯❯❯ กำลังติดตั้งเมนู "|lolcat 
-cd
-wget -q -O menu "https://raw.githubusercontent.com/LiLGun-X/D-script-1.0/master/menu.sh"
-chmod +x menu
-./menu
-rm -f menu
-wget -q -O /usr/bin/bwh "$kguza/menu/bwh"
-chmod +x /usr/bin/bwh
+cd /usr/bin
+wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu"
+chmod +x mx
 
 
 #แจ้งเตือนคนรันสคิป
