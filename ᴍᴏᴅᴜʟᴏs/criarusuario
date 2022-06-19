@@ -253,7 +253,7 @@ fun_edithost() {
 [[ ! -e /usr/lib/sshplus ]] && exit 0
 tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "Criar Usuário SSH";tput sgr0
 echo ""
-echo -ne "\033[1;32mNome do usuário:\033[1;37m ";read username
+echo -ne "\033[1;32m:\033[1;37m ";read username
 [[ -z $username ]] && {
 	echo -e "\n${cor1}Nome de usuário vazio ou invalido!${scor}\n"
 	exit 1
