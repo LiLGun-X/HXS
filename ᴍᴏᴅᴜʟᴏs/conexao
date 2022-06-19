@@ -967,7 +967,7 @@ SCOLOR='\033[0m'
 							sed -i '/iptables -t nat -A POSTROUTING -s 10.8.0.0\/24 -j SNAT --to /d' $RCLOCAL
 							if hash sestatus 2>/dev/null; then
 								if sestatus | grep "Current mode" | grep -qs "enforcing"; then
-									if [[ "$PORT" != '1194' || "$PROTOCOL" = 'tcp' ]]; then
+									if [[ "$PORT" != '443' || "$PROTOCOL" = 'tcp' ]]; then
 										semanage port -d -t openvpn_port_t -p $PROTOCOL $PORT
 									fi
 								fi
@@ -1028,7 +1028,7 @@ SCOLOR='\033[0m'
 						clear
 						fun_apchon() {
 							apt-get install apache2 zip -y
-							sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf
+							sed -i "s/Listen 80/Listen 77/g" /etc/apache2/ports.conf
 							service apache2 restart
 							[[ ! -d /var/www/html ]] && {
 								mkdir /var/www/html
