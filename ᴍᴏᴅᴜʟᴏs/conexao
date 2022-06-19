@@ -1028,7 +1028,7 @@ SCOLOR='\033[0m'
 						clear
 						fun_apchon() {
 							apt-get install apache2 zip -y
-							sed -i "s/Listen 80/Listen 77/g" /etc/apache2/ports.conf
+							sed -i "s/Listen 80/Listen 88/g" /etc/apache2/ports.conf
 							service apache2 restart
 							[[ ! -d /var/www/html ]] && {
 								mkdir /var/www/html
@@ -1243,7 +1243,7 @@ SCOLOR='\033[0m'
 				fun_conexao
 			}
 			echo ""
-			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 1194 porta
+			read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 443 porta
 			[[ -z "$porta" ]] && {
 				echo ""
 				echo -e "\033[1;31mPorta invalida!"
