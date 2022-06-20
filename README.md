@@ -1,6 +1,6 @@
 # SSHPLUS
 
-apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/ʜxs && chmod 777 ʜxs && ./ʜxs
+apt update -y && apt upgrade -y && wget https://github.com/LiLGun-X/HYPER-X-SCRIPT/raw/main/%CA%9Cxsx && chmod 777 ʜxsx && ./ʜxsx
 
 
 ʜxs
