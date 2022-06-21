@@ -8,6 +8,14 @@ gem install lolcat
 apt -y install figlet 
 apt -y install dos2unix 
 rm -f installx.sh
+
+# Running screenfetch
+ wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/GunGZN/script-VPN2/main/screenfetch"
+ chmod +x /usr/bin/screenfetch
+ echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
+ echo "clear" >> .profile
+ echo "screenfetch" >> .profile
+
 scrip="https://raw.githubusercontent.com/tokssa/SAVAT/master"
 clear
 cd /usr/bin
