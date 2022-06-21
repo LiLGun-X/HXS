@@ -113,3 +113,31 @@ fi
 ;;
 2 | 02)
 clear
+cd
+ByX
+echo "        ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮ 
+        ┣ แน่ใจคุณต้องการรันระบบ L2TP    
+        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯    "
+    read -p "        ╰━━ ( Y/n ) : " -e -i y Confirn
+    if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
+wget -q -O l2tp "https://raw.githubusercontent.com/tokssa/SAVAT/master/l2tp"
+chmod +x l2tp
+./l2tp
+exit
+elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
+clear
+clear
+wget -O install "https://raw.githubusercontent.com/tokssa/SAVAT/master/install"
+bash install
+fi
+;;
+$opcao )
+clear
+cd
+cr
+echo "    ━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "    VPNHISPEED THANK YOU "
+echo "    ━━━━━━━━━━━━━━━━━━━━━━━━━"
+exit 0
+;;
+esac
