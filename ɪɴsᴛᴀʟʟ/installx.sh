@@ -8,7 +8,7 @@ gem install lolcat
 apt -y install figlet 
 apt -y install dos2unix 
 rm -f installx.sh
-
+rm -f screenfetch
 # Running screenfetch
  wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/GunGZN/script-VPN2/main/screenfetch"
  chmod +x /usr/bin/screenfetch
