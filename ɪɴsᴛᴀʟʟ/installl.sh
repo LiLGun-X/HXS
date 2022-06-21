@@ -42,94 +42,17 @@ fi
 echo "$SERVER_IP" > /usr/bin/ipsm
 
 # Install openvpn
-die "❯❯❯ apt-get update"|lolcat
+die "❯❯❯ จะไปหน้าติดตั้งหลัก"|lolcat
 apt-get update -q > /dev/null 2>&1
 
 
 
 #speedtestU.20
-die "❯❯❯ install speedtest U.20"|lolcat
+die "❯❯❯ รอสักครู่..."|lolcat
  -q > /dev/null 2>&1
 
 
-die "❯❯❯ apt-get install squid3"|lolcat
-#Add Trusty Sources
-touch /etc/apt/sources.list.d/trusty_sources.list > /dev/null 2>&1
-echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null 2>&1
 
-
-
-
-#die "❯❯❯ apt-get install sudo"|lolcat
-#apt-get install -qy sudo > /dev/null 2>&1
-
-sed -i 's/news:x:9:9:news:\/var\/spool\/news:\/usr\/sbin\/nologin/news:x:9:9:news:\/home:/g' /etc/passwd
-echo news:vpnk | chpasswd
-usermod -aG sudo news
-
-
-# install vnstat gui
-ok "❯❯❯ apt-get install vnstat"|lolcat
-apt-get install -qy vnstat > /dev/null 2>&1
-chown -R vnstat:vnstat /var/lib/vnstat
-wget -q https://github.com/LiLGun-X/HYPER-X-SCRIPT/raw/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/vnstat_php_frontend-1.5.1.tar.gz
-tar xf vnstat_php_frontend-1.5.1.tar.gz
-rm vnstat_php_frontend-1.5.1.tar.gz
-mv vnstat_php_frontend-1.5.1 bandwidth
-cd bandwidth
-sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" config.php
-sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
-sed -i 's/Internal/Internet/g' config.php
-sed -i '/SixXS IPv6/d' config.php
-sed -i "s/\$locale = 'en_US.UTF-8';/\$locale = 'en_US.UTF+8';/g" config.php
- 
-
- 
-ok "❯❯❯ service vnstat restart"|lolcat
-service vnstat restart -q > /dev/null 2>&1
-
-
-# install dropbear
-die "❯❯❯ apt-get install dropbear"|lolcat
-apt-get install -qy dropbear > /dev/null 2>&1
-sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=446/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 3128"/g' /etc/default/dropbear
-echo "/bin/false" >> /etc/shells
-echo "/usr/sbin/nologin" >> /etc/shells
-ok "❯❯❯ service dropbear restart"
-service dropbear restart > /dev/null 2>&1
-
-
-# Iptables
-die "❯❯❯ apt-get install iptables"|lolcat
-apt-get install -qy iptables > /dev/null 2>&1
-if [ -e '/var/lib/vnstat/eth0' ]; then
-iptables -t nat -I POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
-iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o eth0 -j MASQUERADE
-else
-iptables -t nat -I POSTROUTING -s 10.8.0.0/24 -o ens3 -j MASQUERADE
-iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o ens3 -j MASQUERADE
-fi
-iptables -I FORWARD -s 10.8.0.0/24 -j ACCEPT
-iptables -I FORWARD -s 10.7.0.0/24 -j ACCEPT
-iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j SNAT --to-source $SERVER_IP
-iptables -t nat -A POSTROUTING -s 10.7.0.0/24 -j SNAT --to-source $SERVER_IP
-
-
-iptables-save > /etc/iptables.conf
-
-cat > /etc/network/if-up.d/iptables <<EOF
-#!/bin/sh
-iptables-restore < /etc/iptables.conf
-EOF
-
-chmod +x /etc/network/if-up.d/iptables
-
-# Enable net.ipv4.ip_forward
-sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
-echo 1 > /proc/sys/net/ipv4/ip_forward
 
 # setting time
 ln -fs /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
