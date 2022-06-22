@@ -9,12 +9,15 @@ apt -y install figlet
 apt -y install dos2unix 
 rm -f installx.sh
 rm -f screenfetch
+
+cd /bin/bash /etc/openvpn
+rm -f .profile
 # Running screenfetch
- wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/GunGZN/script-VPN2/main/screenfetch"
- chmod +x /usr/bin/screenfetch
+ wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/scf"
+ chmod +x /usr/bin/scf
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
- echo "screenfetch" >> .profile
+ echo "scf" >> .profile
 
 scrip="https://raw.githubusercontent.com/tokssa/SAVAT/master"
 clear
