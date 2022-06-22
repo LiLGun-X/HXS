@@ -13,11 +13,11 @@ fi
 
 # Sanity check
 if [[ $(id -g) != "0" ]] ; then
-    des "❯❯❯ สคริปต์ต้องทำงานเป็น root."
+    echo  "❯❯❯ สคริปต์ต้องทำงานเป็น root."
 fi
 
 #if [[  ! -e /dev/net/tun ]] ; then
-   # des "❯❯❯ TUN/TAP อุปกรณ์ไม่พร้อมใช้งาน."
+   # echo  "❯❯❯ TUN/TAP อุปกรณ์ไม่พร้อมใช้งาน."
 #fi
 
 
@@ -30,13 +30,13 @@ fi
 echo "$SERVER_IP" > /usr/bin/ipsm
 
 # Install openvpn
-die "❯❯❯ จะไปหน้าติดตั้งหลัก"|lolcat
+echo "❯❯❯ จะไปหน้าติดตั้งหลัก"|lolcat
 apt-get update -q > /dev/null 2>&1
 
 
 
 #speedtestU.20
-die "❯❯❯ รอสักครู่..."|lolcat
+echo "❯❯❯ รอสักครู่..."|lolcat
  -q > /dev/null 2>&1
 
 
@@ -48,7 +48,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 service ssh restart
 
-die "❯❯❯ กำลังติดตั้งmx "|lolcat 
+echo "❯❯❯ กำลังติดตั้งmx "|lolcat 
 cd /usr/bin
 wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu"
 chmod +x mx
