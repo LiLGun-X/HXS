@@ -60,7 +60,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 service ssh restart
 
-ok "❯❯❯ กำลังติดตั้งเมนู "|lolcat 
+die "❯❯❯ กำลังติดตั้งmx "|lolcat 
 cd /usr/bin
 wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu"
 chmod +x mx
