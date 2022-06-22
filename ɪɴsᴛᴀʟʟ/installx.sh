@@ -98,23 +98,8 @@ opcao=$zenon
 fi
 case $opcao in
  1 | 01 )
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs
 clear
-cd
-ByX
-echo -e "\033[1;31m       ══════════════════════════════════════════════\033[0m"
-echo -e "\033[1;33m        |  แน่ใจคุณต้องการรันระบบ OpenVPN     |\033[0m"
-echo -e "\033[1;31m       ══════════════════════════════════════════════\033[0m"
-    read -p "             ━━ [ Y/N ] : " -e -i y Confirn
-    if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
-wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/installll"
-bash install
-exit
-elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
-clear
-clear
-wget -O install "https://raw.githubusercontent.com/tokssa/SAVAT/master/install"
-bash install
-fi
 ;;
 2 | 02)
 clear
