@@ -98,7 +98,19 @@ opcao=$zenon
 fi
 case $opcao in
  1 | 01 )
-wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs
+echo "❯❯❯ จะไปหน้าติดตั้งหลัก"|lolcat
+apt-get update -q > /dev/null 2>&1
+
+echo "❯❯❯ รอสักครู่..."|lolcat
+ -q > /dev/null 2>&1
+
+echo "❯❯❯ กำลังติดตั้งmx "|lolcat 
+cd /usr/bin
+wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
+chmod +x mx  -q > /dev/null 2>&1
+
+echo "❯❯❯ รอสักครู่..."|lolcat
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  -q > /dev/null 2>&1
 clear
 ;;
 2 | 02)
