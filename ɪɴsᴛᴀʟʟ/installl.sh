@@ -71,5 +71,5 @@ IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: โค๊คapi line' -F 'message='" 
 Load_file  $IP/KGUZA.ovpn "'' https://notify-api.line.me/api/notify > /dev/null 2>&1
 
-ok "❯❯❯ กำลังติดตั้งเมนู "|lolcat
-wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  -q > /dev/null 2>&1
+
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  
