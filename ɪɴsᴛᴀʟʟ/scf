@@ -3412,7 +3412,9 @@ asciiText () {
 "${c3}           .o:${c2}\`.syhhhhhhh/${c3}.oo++o\`     %s"
 "${c2}               /osyyyyyyo${c3}++ooo+++/    %s"
 "${c2}                   \`\`\`\`\` ${c3}+oo+++o\:    %s"
-"${c3}                          \`oo++.      %s")
+"${c3}                          \`oo++.      %s"
+"${c3}                          HYPER-X-SCRIPT©"
+"${c3}                                    BY-LIL Gun-X")
 		;;
 
 		"KDE neon")
