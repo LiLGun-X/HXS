@@ -110,7 +110,7 @@ wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" 
 chmod +x mx  -q > /dev/null 2>&1
 
 echo "❯❯❯ รอสักครู่..."|lolcat
-wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  -q > /dev/null 2>&1
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  
 clear
 ;;
 2 | 02)
