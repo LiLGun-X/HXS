@@ -13,11 +13,11 @@ rm -f screenfetch
 cd /bin/bash /etc/openvpn
 rm -f .profile
 # Running screenfetch
- wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/scf"
- chmod +x /usr/bin/scf
+ wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/screenfetch"
+ chmod +x /usr/bin/screenfetch
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
- echo "scf" >> .profile
+ echo "screenfetch" >> .profile
 
 scrip="https://raw.githubusercontent.com/tokssa/SAVAT/master"
 clear
