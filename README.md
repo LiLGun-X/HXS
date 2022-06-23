@@ -6,4 +6,4 @@ apt update -y && apt upgrade -y && wget https://github.com/LiLGun-X/HYPER-X-SCRI
 ʜxs
 #Acessa Root
 
-wget https://raw.githubusercontent.com/kiritosshxd/SSHPLUS/master/senharoot.sh && chmod 777 senharoot.sh && ./senharoot.sh
+wget https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/senharoot.sh && chmod 777 senharoot.sh && ./senharoot.sh
