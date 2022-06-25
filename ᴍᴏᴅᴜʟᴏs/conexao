@@ -478,7 +478,7 @@ SCOLOR='\033[0m'
 	fun_v2rayins() {
 		clear
 		v2rayinst() {
-			source <(curl -sL https://raw.githubusercontent.com/kiritosshxd/SSHPLUS/main/Modulos/v2ray)
+			source <(curl -sL https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%E1%B4%8D%E1%B4%8F%E1%B4%85%E1%B4%9C%CA%9F%E1%B4%8Fs/v2ray)
 			sleep 6
 		}
 		if netstat -tunlp | grep v2ray 1>/dev/null 2>/dev/null; then
