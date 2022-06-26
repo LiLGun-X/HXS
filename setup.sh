@@ -74,7 +74,7 @@ echo ""
 echo ""
 echo " เสียใจด้วย รหัสผิด ถ้าไม่มีรหัสติดต่อแอดมินฯ"
 echo ""
-echo " FB : savat54savat"
+echo " Line : gzn007"
 echo ""
 echo ""
 rm /usr/bin/pass
@@ -88,27 +88,27 @@ echo "         ||||||||| PLEASE SELECT MUNU NUMBER  ||||||||" |lolcat
 echo -e "\033[1;31m       ══════════════════════════════════════════════════\033[0m"
 echo -e "\033[1;33m        # หมายเหตุ ถ้าจะติดตั้ง L2TP ให้ติดตั้ง OpenVPN ก่อน   |\033[0m"
 echo ""
-echo -e " \033[1;33m      | [ 1 ] OpenVPN Debian8-9-10 & Ubuntu16.4-18.4-20.4 |\033[0m"
+echo -e " \033[1;33m      | [ 1 ] OpenVPN Debian8-9-10 & Ubuntu18.4-20.4+ |\033[0m"
 echo -e " \033[1;33m      | [ 2 ] L2TP ได้ทุก OS      |\033[0m"
 echo -e "\033[1;31m       ══════════════════════════════════════════════════\033[0m"
-read -p "        ━━ Namber : " opcao
+read -p "        ➤ Namber : " opcao
 else
 opcao=$zenon
 fi
 case $opcao in
  1 | 01 )
-echo "❯❯❯ จะไปหน้าติดตั้งหลัก"|lolcat
+echo "➤ จะไปหน้าติดตั้งหลัก "|lolcat
 apt-get update -q > /dev/null 2>&1
 
-echo "❯❯❯ รอสักครู่..."|lolcat
+echo "➤ รอสักครู่... "|lolcat
  -q > /dev/null 2>&1
 
-echo "❯❯❯ กำลังติดตั้งmx "|lolcat 
+echo "➤ กำลังติดตั้งmx "|lolcat 
 cd /usr/bin
 wget -q -O mx "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
 chmod +x mx  -q > /dev/null 2>&1
 
-echo "❯❯❯ รอสักครู่..."|lolcat
+echo "➤ รอสักครู่..."|lolcat
 wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs   && chmod +x ʜxs && ./ʜxs  
 clear
 ;;
@@ -137,7 +137,7 @@ clear
 cd
 cr
 echo "    ━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "    VPNHISPEED THANK YOU "
+echo "             THANK YOU "
 echo "    ━━━━━━━━━━━━━━━━━━━━━━━━━"
 exit 0
 ;;
