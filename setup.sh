@@ -1,6 +1,6 @@
 #!/bin/bash
 # install python
- 
+ apt install python3 -yy
 apt update 
 apt install ruby-full -yy 
 gem install lolcat
