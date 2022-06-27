@@ -97,7 +97,7 @@ opcao=$zenon
 fi
 case $opcao in
  1 | 01 )
-echo -e " \033[1;33m➤ จะไปหน้าติดตั้ง \033[0m"
+echo -e " \033[1;33m➤ จะไปหน้าติดตั้ง \033[0m"|lolcat
 apt-get update -q > /dev/null 2>&1
 
 echo "➤ รอสักครู่... "|lolcat
