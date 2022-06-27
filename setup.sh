@@ -6,7 +6,7 @@ apt install ruby-full -yy
 gem install lolcat
 apt -y install figlet 
 apt -y install dos2unix 
-rm -f installx
+rm -f setup.sh
 rm -f screenfetch
 
 cd /bin/bash /etc/openvpn
