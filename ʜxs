@@ -118,10 +118,10 @@ pip3 install speedtest-cli
 
 apt-get install -qy vnstat 
 chown -R vnstat:vnstat /var/lib/vnstat
-wget -q https://github.com/LiLGun-X/HYPER-X-SCRIPT/raw/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/vnstat_php_frontend-1.5.1.tar.gz
-tar xf vnstat_php_frontend-1.5.1.tar.gz
-rm vnstat_php_frontend-1.5.1.tar.gz
-mv vnstat_php_frontend-1.5.1 bandwidth
+wget -q https://humdi.net/vnstat/vnstat-2.9.tar.gz
+tar xf vnstat-2.9.tar.gz
+rm vnstat-2.9.tar.gz
+mv vnstat-2.9.tar.gz bandwidth
 cd bandwidth
 sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" config.php
 sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
