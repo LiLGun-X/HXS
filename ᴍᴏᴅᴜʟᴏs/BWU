@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ ! -e /usr/local/bin/Banwidth-Per-Client ]]; then
 	apt-get install python
-	wget -O /usr/local/bin/Banwidth-Per-Client "https://github.com/LiLGun-X/HYPER-X-SCRIPT/blob/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/Banwidth-Per-Client"
+	wget -O /usr/local/bin/Banwidth-Per-Client "https://raw.githubusercontent.com/MyGatherBk/PURE/master/Banwidth-Per-Client"
 	chmod +x /usr/local/bin/Banwidth-Per-Client
 	clear
 echo ""
