@@ -17,7 +17,7 @@ sudo apt install neofetch -yy
 
 # install vnstat gui
 apt-get install vnstat -yy
-systemctl status vnstat
+systemctl start vnstat.service
 
 
 
