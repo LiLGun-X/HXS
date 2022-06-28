@@ -15,6 +15,12 @@ rm -f .profile
 
 sudo apt install neofetch -yy
 
+# install vnstat gui
+apt-get install vnstat -yy
+systemctl status vnstat
+
+
+
  
  echo "/bin/bash /etc/openvpn/openvpn.bash" >> .profile
  echo "clear" >> .profile
