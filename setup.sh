@@ -109,12 +109,11 @@ apt-get install vnstat -yy -q > /dev/null 2>&1
 systemctl start vnstat.service -q > /dev/null 2>&1
 
 echo -e " \033[1;35m➤ กำลังติดตั้งmenu \033[0m"
-cd /usr/local/bin
 wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
-chmod +x /usr/local/bin/m -q > /dev/null 2>&1
+chmod +x m -q > /dev/null 2>&1
 
 echo -e " \033[1;36m➤ กำลังโหลดหน้าติดตั้ง...\033[0m"
-wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs  -q > /dev/null 2>&1  && chmod +x ʜxs && ./ʜxs  
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs  && chmod +x ʜxs && ./ʜxs  
 clear
 ;;
 2 | 02)
