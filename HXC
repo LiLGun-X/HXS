@@ -146,6 +146,8 @@ echo -e "      \033[1;33mกำลังติดตั้งฟังก์ช�
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
+cd
+ByX
 #แจ้งเตือนคนรันสคิป
 IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: Bearer AS5wVe8ahymLLtXC5UiBPFkLvBSZ475RkMEArpq8WHD' -F 'message='" 
