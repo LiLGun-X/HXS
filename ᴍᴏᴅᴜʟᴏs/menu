@@ -333,7 +333,7 @@ system=$(cut -d' ' -f1 /etc/issue.net)
 fi
 # vnstat meter
 if [[ -e /etc/vnstat.conf ]]; then
-	INTERFACE=`vnstat -y | head -n2 | awk '{print $1}'`
+	INTERFACE=`vnstat -m | head -n1 | awk '{print $1}' | cut -d ':' -f 1`
 	TOTALBWx=$(vnstat -i $INTERFACE --nick local | grep "total:" | awk '{print $8" "substr ($9, 1, 1)}')
 fi
 _ons=$(ps -x | grep sshd | grep -v root | grep priv | wc -l)
