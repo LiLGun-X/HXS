@@ -115,6 +115,7 @@ pip install speedtest-cli
 pip3 install speedtest-cli
 
 # install vnstat gui
+apt-get install vnstat
 apt-get install -qy vnstat 
 chown -R vnstat:vnstat /var/lib/vnstat
 wget -q https://humdi.net/vnstat/vnstat-2.9.tar.gz
@@ -122,11 +123,11 @@ tar xf vnstat-2.9.tar.gz
 rm vnstat-2.9.tar.gz
 mv vnstat-2.9.tar.gz bandwidth
 cd bandwidth
-sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" vnstat.conf
-sed -i "s/\$language = 'nl';/\$language = 'en';/g" vnstat.conf
-sed -i 's/Internal/Internet/g' vnstat.conf
-sed -i '/SixXS IPv6/d' vnstat.conf
-sed -i "s/\$locale = 'en_US.UTF-8';/\$locale = 'en_US.UTF+8';/g" config.php
+sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" vnstat-json.php
+sed -i "s/\$language = 'nl';/\$language = 'en';/g" vnstat-json.php
+sed -i 's/Internal/Internet/g' vnstat-json.php
+sed -i '/SixXS IPv6/d' vnstat-json.php
+sed -i "s/\$locale = 'en_US.UTF-8';/\$locale = 'en_US.UTF+8';/g" vnstat-json.php
 
 
 }
