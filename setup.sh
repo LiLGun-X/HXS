@@ -15,7 +15,8 @@ rm -f .profile
 
 sudo apt install neofetch -yy
 
-
+apt-get install vnstat -yy 
+systemctl start vnstat.service 
 
 
  
@@ -105,8 +106,6 @@ echo -e " \033[1;32m➤ รอสักครู่... \033[0m"
  -q > /dev/null 2>&1
 
 echo -e " \033[1;32m➤ กำลังติดตั้งVnstat \033[0m"
-apt-get install vnstat -yy -q > /dev/null 2>&1
-systemctl start vnstat.service -q > /dev/null 2>&1
 
 echo -e " \033[1;35m➤ กำลังติดตั้งmenu \033[0m"
 wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
