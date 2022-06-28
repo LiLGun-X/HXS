@@ -108,11 +108,12 @@ echo -e " \033[1;32m➤ รอสักครู่... \033[0m"
 echo -e " \033[1;32m➤ กำลังติดตั้งVnstat \033[0m"
 
 echo -e " \033[1;35m➤ กำลังติดตั้งmenu \033[0m"
+cd /usr/bin
 wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
-chmod +x m -q > /dev/null 2>&1
+chmod +x m 
 
 echo -e " \033[1;36m➤ กำลังโหลดหน้าติดตั้ง...\033[0m"
-wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/ʜxs  && chmod +x ʜxs && ./ʜxs  
+wget https://raw.githubusercontent.com/LiLGun-X/Hyper-X-SCRIPT/main/HXC  && chmod +x HXC && ./HXC  
 clear
 ;;
 2 | 02)
