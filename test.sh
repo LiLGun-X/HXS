@@ -99,45 +99,24 @@ opcao=$zenon
 fi
 case $opcao in
  1 | 01 )
-echo -e " \033[1;31m➤ จะไปหน้าติดตั้งหลัก \033[0m"
-apt-get update -q > /dev/null 2>&1
-
-echo -e " \033[1;32m➤ รอสักครู่... \033[0m"
- -q > /dev/null 2>&1
-
-echo -e " \033[1;32m➤ กำลังติดตั้งVnstat \033[0m"
-apt-get install -qy vnstat > /dev/null 2>&1
-chown -R vnstat:vnstat /var/lib/vnstat
-cd /home/vps/public_html
-wget -q http://www.sqweek.com/sqweek/files/vnstat_php_frontend-1.5.1.tar.gz
-tar xf vnstat_php_frontend-1.5.1.tar.gz
-rm vnstat_php_frontend-1.5.1.tar.gz
-mv vnstat_php_frontend-1.5.1 bandwidth
-cd bandwidth
-sed -i "s/\$iface_list = array('eth0', 'sixxs');/\$iface_list = array('eth0');/g" config.php
-sed -i "s/\$language = 'nl';/\$language = 'en';/g" config.php
-sed -i 's/Internal/Internet/g' config.php
-sed -i '/SixXS IPv6/d' config.php
-sed -i "s/\$locale = 'en_US.UTF-8';/\$locale = 'en_US.UTF+8';/g" config.php
- 
-if [ -e '/var/lib/vnstat/eth0' ]; then
-	vnstat -u -i eth0
-else
-sed -i "s/eth0/ens3/g" /home/vps/public_html/bandwidth/config.php
-vnstat -u -i ens3
-fi
- 
-echo -e " \033[1;35m➤ service vnstat restart\033[0m"
-service vnstat restart -q > /dev/null 2>&1
-
-echo -e " \033[1;35m➤ กำลังติดตั้งmenu \033[0m"
-cd /usr/bin
-wget -q -O m "https://raw.githubusercontent.com/MyGatherBk/MyAuto/master/Menu" -q > /dev/null 2>&1
-chmod +x m 
-
-echo -e " \033[1;36m➤ กำลังโหลดหน้าติดตั้ง...\033[0m"
-wget https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/Plus  && chmod +x Plus && ./Plus 
 clear
+cd
+ByX
+echo "        ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮ 
+        ┣ แน่ใจคุณต้องการรันระบบ OpenVPN    
+        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯   "
+    read -p "        ╰━━ ( Y/n ) : " -e -i y Confirn
+    if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
+wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/SCRIPT-VPN/WeGo/Autoinstall/installl.sh"
+bash install
+exit
+elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
+clear
+clear
+wget -O install "https://raw.githubusercontent.com/tokssa/SAVAT/master/install"
+bash install
+fi
+;;
 ;;
 2 | 02)
 clear
