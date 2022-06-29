@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-
-
-
-
-
-
 #OS
 if [[ -e /etc/debian_version ]]; then
 VERSION_ID=$(cat /etc/os-release | grep "VERSION_ID")
