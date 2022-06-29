@@ -107,7 +107,7 @@ echo "        ╭━━━━━━━━━━━━━━━━━━━━━
         ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯   "
     read -p "        ╰━━ ( Y/n ) : " -e -i y Confirn
     if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
-wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/installll"
+wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/install"
 bash install
 exit
 elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
