@@ -6,7 +6,7 @@ apt install ruby-full -yy
 gem install lolcat
 apt -y install figlet 
 apt -y install dos2unix 
-rm -f setup.sh
+rm -f test.sh
 rm -f screenfetch
 
 cd /bin/bash /etc/openvpn
@@ -107,8 +107,8 @@ echo "        ╭━━━━━━━━━━━━━━━━━━━━━
         ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯   "
     read -p "        ╰━━ ( Y/n ) : " -e -i y Confirn
     if [[ "$Confirn" = "y" || "$Confirn" = "Y" ]]; then
-wget -q -O installll "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/installll"
-bash installll
+wget -q -O install "https://raw.githubusercontent.com/LiLGun-X/HYPER-X-SCRIPT/main/%C9%AA%C9%B4s%E1%B4%9B%E1%B4%80%CA%9F%CA%9F/installll"
+bash install
 exit
 elif [[ "$Confirn" = "n" || "$Confirn" = "N" ]]; then
 clear
