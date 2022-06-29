@@ -117,7 +117,6 @@ wget -O install "https://raw.githubusercontent.com/tokssa/SAVAT/master/install"
 bash install
 fi
 ;;
-;;
 2 | 02)
 clear
 cd
